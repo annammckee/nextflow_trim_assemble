@@ -1,0 +1,37 @@
+Command line: /opt/conda/envs/homework/bin/spades.py	-1	/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R1.trimmed.fastq.gz	-2	/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R2.trimmed.fastq.gz	-o	/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831.assembly	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.12.1
+  OS: Linux-6.1.75-060175-generic-x86_64-with-glibc2.35
+
+Output dir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831.assembly
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R1.trimmed.fastq.gz']
+      right reads: ['/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R2.trimmed.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831.assembly/tmp
+  Threads: 16
+  Memory limit (in Gb): 62
+

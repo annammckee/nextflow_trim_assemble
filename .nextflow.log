@@ -1,0 +1,69 @@
+Feb-13 16:47:57.545 [main] DEBUG nextflow.cli.Launcher - $> nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz'
+Feb-13 16:47:57.907 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.1
+Feb-13 16:47:57.953 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/gitpod/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.3,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.1
+Feb-13 16:47:57.968 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-13 16:47:57.969 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-13 16:47:57.998 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-13 16:47:58.159 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-13 16:47:58.498 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Feb-13 16:47:58.542 [main] INFO  nextflow.cli.CmdRun - Launching `biol7210_nf_homework.nf` [soggy_archimedes] DSL2 - revision: 8eb5d2f403
+Feb-13 16:47:58.547 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-13 16:47:58.548 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-13 16:47:58.567 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/gitpod/.nextflow/secrets/store.json
+Feb-13 16:47:58.601 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@bc0f53b] - activable => nextflow.secret.LocalSecretsProvider@bc0f53b
+Feb-13 16:47:58.780 [main] DEBUG nextflow.Session - Session UUID: 1fa4c4ae-f951-42a5-a745-de1e0141cde2
+Feb-13 16:47:58.780 [main] DEBUG nextflow.Session - Run name: soggy_archimedes
+Feb-13 16:47:58.782 [main] DEBUG nextflow.Session - Executor pool size: 16
+Feb-13 16:47:58.860 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-13 16:47:58.867 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-13 16:47:59.046 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.1 build 5891
+  Created: 12-01-2024 22:01 UTC (22:01 GMT)
+  System: Linux 6.1.75-060175-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 9886@nextflowio-training-k4n7kj2fznh [127.0.0.1]
+  CPUs: 16 - Mem: 62.8 GB (1.5 GB) - Swap: 375 GB (374.9 GB)
+Feb-13 16:47:59.313 [main] DEBUG nextflow.Session - Work-dir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work [xfs]
+Feb-13 16:47:59.314 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspace/gitpod/nf-training/nextflow_trim_assemble/bin
+Feb-13 16:47:59.433 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-13 16:47:59.500 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-13 16:47:59.703 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-13 16:47:59.764 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Feb-13 16:48:00.064 [main] DEBUG nextflow.Session - Session start
+Feb-13 16:48:03.740 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-13 16:48:04.439 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-13 16:48:04.440 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-13 16:48:04.448 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-13 16:48:04.455 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=62.8 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Feb-13 16:48:04.500 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Feb-13 16:48:04.666 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-13 16:48:04.666 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-13 16:48:04.678 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: TrimReads, AssembleFasta
+Feb-13 16:48:04.679 [main] DEBUG nextflow.Session - Igniting dataflow network (3)
+Feb-13 16:48:04.684 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *_{R1,R2}.fastq.gz; options: [:]
+Feb-13 16:48:04.686 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > TrimReads
+Feb-13 16:48:04.697 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > AssembleFasta
+Feb-13 16:48:04.703 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_c96539c07c5234dc: /workspace/gitpod/nf-training/nextflow_trim_assemble/biol7210_nf_homework.nf
+Feb-13 16:48:04.703 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-13 16:48:04.703 [main] DEBUG nextflow.Session - Session await
+Feb-13 16:48:05.361 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-13 16:48:05.366 [Task submitter] INFO  nextflow.Session - [64/79909d] Submitted process > TrimReads (HI.4019.002.index_7.ANN0831)
+Feb-13 16:48:20.985 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: TrimReads (HI.4019.002.index_7.ANN0831); status: COMPLETED; exit: 0; error: -; workDir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/64/79909d090777a63c4e98c076b13375]
+Feb-13 16:48:21.046 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-13 16:48:21.047 [Task submitter] INFO  nextflow.Session - [c7/ab1654] Submitted process > AssembleFasta (HI.4019.002.index_7.ANN0831)
+Feb-13 16:48:21.060 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-13 16:53:04.627 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: AssembleFasta (HI.4019.002.index_7.ANN0831); status: RUNNING; exit: -; error: -; workDir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b]
+Feb-13 16:58:04.701 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: AssembleFasta (HI.4019.002.index_7.ANN0831); status: RUNNING; exit: -; error: -; workDir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b]
+Feb-13 16:58:22.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: AssembleFasta (HI.4019.002.index_7.ANN0831); status: COMPLETED; exit: 0; error: -; workDir: /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b]
+Feb-13 16:58:22.202 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-13 16:58:22.203 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Feb-13 16:58:22.203 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-13 16:58:22.326 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Feb-13 16:58:22.332 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=10m 17s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Feb-13 16:58:22.425 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-13 16:58:22.432 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Feb-13 16:58:22.432 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

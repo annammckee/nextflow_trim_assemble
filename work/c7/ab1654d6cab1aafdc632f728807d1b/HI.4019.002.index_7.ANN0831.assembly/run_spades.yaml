@@ -1,0 +1,146 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_start
+- STAGE: Read error correction
+  args:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/corrected/configs/config.info
+  config_dir: corrected
+  del_after:
+  - tmp/hammer_g3y757gx
+  output_files:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/corrected/corrected.yaml
+  path: /opt/conda/envs/homework/bin/spades-hammer
+  short_name: ec_runtool
+- STAGE: corrected reads compression
+  args:
+  - /opt/conda/envs/homework/share/spades/spades_pipeline/scripts/compress_all.py
+  - --input_file
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/corrected/corrected.yaml
+  - --ext_python_modules_home
+  - /opt/conda/envs/homework/share/spades
+  - --max_threads
+  - '16'
+  - --output_dir
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/corrected
+  - --gzip_output
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/python
+  short_name: ec_compress
+- STAGE: Read error correction
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: ec_finish
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K21
+  args:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K21/configs/config.info
+  config_dir: K21
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/spades-core
+  short_name: k21
+- STAGE: K33
+  args:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K33/configs/config.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K55/configs/config.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/spades-core
+  short_name: k55
+- STAGE: K77
+  args:
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/configs/config.info
+  config_dir: K77
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/spades-core
+  short_name: k77
+- STAGE: Copy files
+  args:
+  - /opt/conda/envs/homework/share/spades/spades_pipeline/scripts/copy_files.py
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/before_rr.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/before_rr.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/assembly_graph_after_simplification.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/assembly_graph_after_simplification.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/final_contigs.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/contigs.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/first_pe_contigs.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/first_pe_contigs.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/strain_graph.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/strain_graph.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/scaffolds.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/scaffolds.fasta
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/scaffolds.paths
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/scaffolds.paths
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/assembly_graph_with_scaffolds.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/assembly_graph_with_scaffolds.gfa
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/assembly_graph.fastg
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/assembly_graph.fastg
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/K77/final_contigs.paths
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_cue_saj_
+  output_files: []
+  path: /opt/conda/envs/homework/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /opt/conda/envs/homework/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/scaffolds.fasta
+  - --misc_dir
+  - /workspace/gitpod/nf-training/nextflow_trim_assemble/work/c7/ab1654d6cab1aafdc632f728807d1b/HI.4019.002.index_7.ANN0831.assembly/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /opt/conda/envs/homework/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

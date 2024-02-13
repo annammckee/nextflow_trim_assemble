@@ -1,0 +1,3 @@
+2024-02-13 16:12:47	11m 2s	lonely_raman	OK	64b6c1f115b6dbf00e9ad81976a12a07	8761efd4-e831-4ff9-a0d2-95ac41fac3ac	nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz'
+2024-02-13 16:32:13	12m 19s	disturbed_torricelli	OK	f275ca5f86ffe25e91eeaff7109cea0d	39f72c0a-5eb5-429a-86f8-66d89678560c	nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz'
+2024-02-13 16:47:59	10m 23s	soggy_archimedes	OK	8eb5d2f403ae1e92d3e8b51a288f2c5d	1fa4c4ae-f951-42a5-a745-de1e0141cde2	nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz'

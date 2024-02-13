@@ -1,0 +1,7 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:56.121    79M / 807M  WARN    General                 (simplification.cpp        : 504)   The determined erroneous connection coverage threshold may be determined improperly
+ * 0:00:47.894    61M / 1318M WARN    General                 (kmer_coverage_model.cpp   : 218)   Too many erroneous kmers, the estimates might be unreliable
+ * 0:00:48.376    61M / 1318M WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 3
+ * 0:00:30.834    86M / 1133M WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 2
+======= Warnings saved to /workspace/gitpod/nf-training/nextflow_trim_assemble/work/7b/18f2760d5574e4483ed15d00423d3d/HI.4019.002.index_7.ANN0831.assembly/warnings.log

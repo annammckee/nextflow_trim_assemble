@@ -1,0 +1,7 @@
+- "left reads":
+  - "/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R1.trimmed.fastq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/workspace/gitpod/nf-training/nextflow_trim_assemble/work/4f/68b220481293d2ebc51ddc3506ac4e/HI.4019.002.index_7.ANN0831_R2.trimmed.fastq.gz"
+  "type": "paired-end"
