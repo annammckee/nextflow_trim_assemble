@@ -5,10 +5,16 @@ This nextflow script takes paired end fastq.gz files and trims and assembles the
 #### This script trims fastq.gz files with trimmoatic and assembles them with SPAdes
 
 ##### Create conda environment with software
-`conda env create -f hmwrk.yml'
+```
+conda env create -f hmwrk.yml
+```
 
 ##### Activate conda environment
-'conda activate homework'
+```
+conda activate homework
+```
 
 ##### Run nextflow script
-'nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz'
+```
+nextflow run biol7210_nf_homework.nf --reads 'data/*_{R1,R2}.fastq.gz
+```
